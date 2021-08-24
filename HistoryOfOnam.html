@@ -4,40 +4,114 @@
 <head>
   <meta charset="utf-8">
   <title>Swiper demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 </head>
 
 <body>
-  <!-- Swiper -->
-  <div class="swiper">
+  <!-- Slider main container -->
+  <div class="swiper-container swiper1">
+    <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
+      <!-- Slides -->
       <div class="swiper-slide">Slide 1</div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
     </div>
-    <!-- Add Pagination -->
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-container swiper2">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-container swiper3">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-container swiper4">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-container swiper5">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
   </div>
 
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Initialize Swiper -->
   <script type="module">
-    import Swiper from 'swiper/swiper-bundle.esm.js';
-    import 'swiper/swiper-bundle.css';
-    var swiper = new Swiper('.swiper', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
+    const swiper = new Swiper('.swiper1', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+    const swiper2 = new Swiper('.swiper2', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+    const swiper3 = new Swiper('.swiper3', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+    const swiper4 = new Swiper('.swiper4', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+    const swiper5 = new Swiper('.swiper5', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
     });
   </script>
 
@@ -57,6 +131,11 @@
       margin: 0;
       padding: 0;
     }
+
+    .swiper-container {
+        width: 600px;
+        height: 300px;
+        }
 
     .swiper {
       width: 100%;
@@ -83,8 +162,7 @@
       align-items: center;
     }
   </style>
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
 </body>
 
 </html>
